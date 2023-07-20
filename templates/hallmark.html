@@ -1,62 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Byron David Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <nav id="main">
-    <div class="name">Byron David</div>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="sony.html">Sony</a></li>
-        <li><a class="active" href="#">Hallmark</a></li>
-        <li><a href="google.html">Google</a></li>
-        <li><a href="personal.html">Personal</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <div class="gallery">
-    <ul>
-      <li>
-
+<h2 id="hallmark">Hallmark Keepsake Ornaments</h2>
+<div class="gallery">
+  <ul class="gallery-index">
+    {% for name in hallmark_folder %}
+      <li class="gallery_li">
+        <img src="{{ url_for('static', filename='hallmark/' + name) }}" >
+        <div class="fullpage" onclick="this.style.display='none';"></div>
       </li>
-    </ul>
-  </div>
-
-  <div id="myModal" class="modal">
-    <span class="close cursor" onclick="closeModal()">&times;</span>
-    <div class="modal-content">
-  
-      <!-- <div class="mySlides">
-        <img src="images/Brush1.jpg">
-      </div>
-  
-      <div class="mySlides">
-        <img src="images/Brush2.jpg">
-      </div>
-  
-      <div class="mySlides">
-        <img src="images/Brush3.jpg">
-      </div>
-      
-      <div class="mySlides">
-        <img src="images/Brush4.jpg">
-      </div>
-      
-      <div class="mySlides">
-        <img src="images/Brush5.jpg">
-      </div>
-      <div class="mySlides">
-        <img src="images/Brush6.jpg">
-      </div>
-
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
-
-    </div>
-  </div>
-</body>
-</html>
+    {% endfor %}
+  </ul>
+</div>
+<div id="fullpage" onclick="this.style.display='none';"></div>

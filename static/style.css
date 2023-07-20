@@ -1,16 +1,35 @@
 html {
-    box-sizing: border-box;
-    background: rgb(31, 27, 27);
+  box-sizing: border-box;
+  background: rgb(27, 27, 29);
 
-    font-size: 18px;
-    font-weight: 200;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+header {
+  color: white;
+  margin-left: 7vw;
+  margin-top: 5vw;
 }
 
 h1 {
   font-size: 50px;
-  color: white;
+  margin: 0;
 }
-  
+
+#subtitle {
+  font-size: 24px;
+  color: rgb(129, 129, 255);
+}
+
+h2 {
+  font-size: 40px;
+  padding: 0;
+  margin-top: 200px;
+  color: white;
+  text-align: center;
+}
+
 body {
   margin: 0;
   /* font-family: "Verdana", "Geneva", sans-serif;  */
@@ -22,13 +41,17 @@ body {
 box-sizing: inherit;
 }
 
+a:hover {
+  color:rgb(129, 129, 255);
+}
+
 .container ul{
   display: flex;
   flex-flow: row wrap;
   list-style: none;
   padding-inline-start: 0px;
   margin: 32px 0;
-  padding: 50px
+  padding: 0px 50px
 }
 
 .container li {
@@ -46,8 +69,7 @@ ul {
 }
 
 nav {
-  /* background: rgb(235, 235, 235); */
-  /* color: rgb(31, 27, 27); */
+  background-color: rgb(27, 27, 29);
   color: white;
   display: flex;
   justify-content: space-between;
@@ -55,189 +77,117 @@ nav {
   top: 0;
   width: 100%;
   transition:all 0.5s;
-  position: relative;
+  position: fixed;
   padding-left: 40px;
   padding-right: 40px;
   z-index: 1;
-  }
+  border-bottom: 2px solid rgb(129, 129, 255);
+}
 
-/* .active {
-  color: rgb(255, 255, 255);
-  background: rgb(31, 27, 27);
-} */
+#fullpage {
+  display: none;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-color: rgb(27, 27, 29);
+}
 
-.name {
-    color: white;
-    font-size: 20px;
-    /* letter-spacing: 5px; */
+.active {
+  color:rgb(129, 129, 255);
+}
+
+.nav_name {
+  color: white;
+  font-size: 20px;
 }
 
 body.fixed-nav nav {
-    position: fixed;
-    box-shadow: 0 5px 0 rgba(0,0,0,0.1);
+  position: fixed;
+  box-shadow: 0 5px 0 rgba(0,0,0,0.1);
 }
 
 nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
 }
 
 nav li {
-    flex: 1;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav a {
-    text-decoration: none;
-    padding: 20px;
-    color: white;
-    /* color: rgb(31, 27, 27); */
-    display: inline-block;
-    transition: all 0.2s;
-    /* text-transform: uppercase; */
+  text-decoration: none;
+  padding: 20px;
+  color: white;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.gallery {
+  margin: 0px 100px;
 }
 
 .gallery ul {
-    line-height: 0;
-   
-    -webkit-column-count: 3;
-    -webkit-column-gap:   0px;
-    -moz-column-count:    3;
-    -moz-column-gap:      0px;
-    column-count:         3;
-    column-gap:           0px;
-    list-style-type: none;
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0;
+  line-height: 0;
+  
+  -webkit-column-count: 3;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    3;
+  -moz-column-gap:      0px;
+  column-count:         3;
+  column-gap:           0px;
+  list-style-type: none;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
 }
 
 .gallery img {
-    border: solid rgb(31, 27, 27);
-    width: 100%;
-    height: auto;
-    cursor: pointer;
+  border: solid rgb(27, 27, 29);
+  width: 100%;
+  height: auto;
+  cursor: pointer;
 }
 
 @media (max-width: 1200px) {
-    #photos {
-    -moz-column-count:    4;
-    -webkit-column-count: 4;
-    column-count:         4;
-    }
+  #photos {
+  -moz-column-count:    4;
+  -webkit-column-count: 4;
+  column-count:         4;
   }
-  @media (max-width: 1000px) {
-    #photos {
-    -moz-column-count:    3;
-    -webkit-column-count: 3;
-    column-count:         3;
-    }
-  }
-  @media (max-width: 800px) {
-    #photos {
-    -moz-column-count:    2;
-    -webkit-column-count: 2;
-    column-count:         2;
-    }
-  }
-  @media (max-width: 400px) {
-    #photos {
-    -moz-column-count:    1;
-    -webkit-column-count: 1;
-    column-count:         1;
-    }
-  }
-
-
-/* The Modal (background) */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 50px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(31, 27, 27);
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    position: relative;
-    margin: auto;
-    padding: 0;
-    width: 90%;
-    max-width: 1200px;
-  }
-  
-  /* The Close Button */
-  .close {
-    color: white;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 35px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #999;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .mySlides {
-    display: none;
-  }
-
-.modal img {
-  width: 100%;
-  height: auto;
 }
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
+@media (max-width: 1000px) {
+  #photos {
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+  }
 }
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+@media (max-width: 800px) {
+  #photos {
+  -moz-column-count:    2;
+  -webkit-column-count: 2;
+  column-count:         2;
+  }
 }
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.modal-text {
-  color: white;
-  text-align: center;
-  font-size: 25px;
+@media (max-width: 400px) {
+  #photos {
+  -moz-column-count:    1;
+  -webkit-column-count: 1;
+  column-count:         1;
+  }
 }
 
 .img-hover {
@@ -264,9 +214,4 @@ nav a {
 .gallery li:hover .img-hover {
   opacity: 1;
   cursor: pointer;
-}
-
-.vid-text {
-  color: white;
-  font-size: 30px;
 }
