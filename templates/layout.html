@@ -4,35 +4,27 @@
     <meta name="Byron David Portfolio" charset="UTF-8" content="initial-scale=1, width=device-width">
     <title>Byron David Portfolio</title>
     <link rel="stylesheet" href="/static/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
   </head>
-  <!-- <script src="/scripts/sony.js"></script> -->
-
   <body>
     <nav>
       <div class="nav_name">Byron David</div>
       <ul id="nav">
-          <!-- <li><a id="name">Byron David</a></li> -->
           <li><a class="link active" href="">Home</a></li>
           <li><a class="link" href="#sony">Sony</a></li>
           <li><a class="link" href="#hallmark">Hallmark</a></li>
           <li><a class="link" href="#personal">Personal</a></li>
-          <li><a class="link" href="#contact">Contact</a></li>
+          <li><a class="link" href="static/Resume.pdf">Resume</a></li>
       </ul>
     </nav>
     <header>
       <h1>Hi, I'm Byron</h1>
-      <h3 id="subtitle">Technical Artist</h3>
+      <h3 class="subtitle">A Technical Artist</h3>
+      <h3 class="subtitle">Who's worked in Games in Robotics</h3>
     </header>
-    <!-- {% block body %}{% endblock %} -->
-    {% include 'sony.html' %}
-    {% include 'hallmark.html' %}
-    <!-- <div class="container">
-      <ul>
-          <li><a class="active" href="sony.html"><img class="img" src="/static/home/Concrete_Genie.jpg"></a></li>
-          <li><a class="active" href="hallmark.html"><img class="img" src="/static/hallmark/jd1.jpg"></a></li>
-          <li><a class="active" href="personal.html"><img class="img" src="/static/home/Concrete_Genie.jpg"></a></li>
-          <li><a class="active" href="google.html"><img class="img" src="/static/home/Concrete_Genie.jpg"></a></li>
-      </ul> -->
+      {% include 'sony.html' %}
+      {% include 'hallmark.html' %}
+      {% include 'personal.html' %}
     </div>
     <script src="/static/sony.js"></script>
   </body>

@@ -17,7 +17,8 @@ h1 {
   margin: 0;
 }
 
-#subtitle {
+.subtitle {
+  margin-top: 0;
   font-size: 24px;
   color: rgb(129, 129, 255);
 }
@@ -25,16 +26,20 @@ h1 {
 h2 {
   font-size: 40px;
   padding: 0;
-  margin-top: 200px;
+  margin-top: 100px;
   color: white;
   text-align: center;
 }
 
+.line {
+  width: 70%;
+  border-bottom: 2px solid rgb(129, 129, 255);
+  margin: 30px auto;
+}
+
 body {
   margin: 0;
-  /* font-family: "Verdana", "Geneva", sans-serif;  */
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  /* font-family: 'Courier', monospace; */
+  font-family: "Poppins",sans-serif;
 }
 
 *, *:before, *:after {
@@ -81,7 +86,7 @@ nav {
   padding-left: 40px;
   padding-right: 40px;
   z-index: 1;
-  border-bottom: 2px solid rgb(129, 129, 255);
+  /* border-bottom: 2px solid rgb(129, 129, 255); */
 }
 
 #fullpage {
@@ -136,12 +141,11 @@ nav a {
 }
 
 .gallery {
-  margin: 0px 100px;
+  margin: 0px 50px;
 }
 
 .gallery ul {
   line-height: 0;
-  
   -webkit-column-count: 3;
   -webkit-column-gap:   0px;
   -moz-column-count:    3;
