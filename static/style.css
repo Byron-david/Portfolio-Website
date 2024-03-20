@@ -50,6 +50,30 @@ a:hover {
   color:rgb(129, 129, 255);
 }
 
+.google-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.video-container{
+  display: flex;
+}
+
+.title {
+  color: white;
+  font-size: 22px;
+  text-align: center;
+}
+
+.subtext {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+
 .container ul{
   display: flex;
   flex-flow: row wrap;
@@ -160,6 +184,12 @@ nav a {
 
 .gallery img {
   border: solid rgb(27, 27, 29);
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.gallery video {
   width: 100%;
   height: auto;
   cursor: pointer;

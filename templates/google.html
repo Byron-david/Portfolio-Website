@@ -1,16 +1,64 @@
-  <div >
-    <ul>
-      <li>
-        <a href="https://relay-policy-learning.github.io/">        
-          <video controls>
-            <source src="{{ url_for('static', filename='google/RPL.mp4') }}" type="video/mp4">
-          </video>
-        </a>
+<h2 id="google">Google DeepMind Robotics</h2>
+<div class="line"></div>
 
-      </li>
-      <li>        
-        <div class="vid-text">Relay Policy Learning
-        </div>
-      </li>
-    </ul>
+<div class="google-container">
+  <div class="google-container">
+    <a href="https://relay-policy-learning.github.io/">
+      <div class="title"> Relay Policy Learning (Paper) </div>
+      <div class="subtext"> Created environment, rigging, collisions and physics properties</div>
+    </a>
+    <video controls muted>
+      <source src="{{ url_for('static', filename='google/RPL.mp4') }}" type="video/mp4">
+    </video>
   </div>
+
+  <div class="google-container">
+    <a href="https://blog.research.google/2020/04/exploring-nature-inspired-robot-agility.html">
+      <div class="title"> Exploring Nature-Inspired Robot Agility (Paper) </div>
+      <div class="subtext"> Set up rigging and animation</div>
+    </a>
+    <div class="gallery">
+      <ul class="gallery-index">
+        {% for name in google_video %}
+          <li class="gallery_li">
+            <video autoplay loop muted>
+              <source src="{{ url_for('static', filename='google/minitaur/' + name) }}" type="video/mp4" loading="lazy">
+            </video>
+            <div class="fullpage" onclick="this.style.display='none';"></div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+  </div>
+  
+  <div class="google-container">
+    <a href="https://relay-policy-learning.github.io/">
+      <div class="title"> Learning From Play (Paper) </div>
+      <div class="subtext"> Created environment, rigging, collisions and physics properties </div>
+    </a>
+    <video muted autoplay>
+      <source src="{{ url_for('static', filename='google/lmp.mp4') }}" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+
+
+<!-- <div class="gallery google-container">
+  <ul>
+    <li>        
+      <div class="title">
+        Relay Policy Learning
+      </div>
+    </li>
+    <li>
+      <a href="https://relay-policy-learning.github.io/">        
+        <video controls>
+          <source src="{{ url_for('static', filename='google/RPL.mp4') }}" type="video/mp4">
+        </video>
+      </a>
+    </li>
+  </ul>
+</div> -->
+<div id="fullpage" onclick="this.style.display='none';"></div>

@@ -4,7 +4,7 @@
   <ul class="gallery-index">
     {% for name in hallmark_folder %}
       <li class="gallery_li">
-        <img src="{{ url_for('static', filename='hallmark/' + name) }}" >
+        <img src="{{ url_for('static', filename='hallmark/' + name) }}" loading="lazy">
         <div class="fullpage" onclick="this.style.display='none';"></div>
       </li>
     {% endfor %}
