@@ -1,0 +1,47 @@
+<h2 id="shaders">Realtime VFX</h2>
+<div class="line"></div>
+
+<div class="google-container">
+  <div class="google-container">
+    <div class="title"> Fire Shader</div>
+    <div class="subtext"> Shader that pans a gradated wave texture with alpha erosion over the top. You can
+      also add noise distortion and world position offset to make it more realistic. It has U/V panning options
+      for all the textures and you can tile them as well.
+    </div>
+    <video controls muted>
+      <source src="{{ url_for('static', filename='vfx/Recordings/Fire_SSCurve.mp4') }}" type="video/mp4">
+    </video>
+  </div>
+</div>
+<div class="google-container">
+  <div class="google-container">
+    <div class="title"> Fire Softness</div>
+    <video controls muted>
+      <source src="{{ url_for('static', filename='vfx/Recordings/Fire_SSCurveSoftness.mp4') }}" type="video/mp4">
+    </video>
+  </div>
+</div>
+<div class="google-container">
+  <div class="google-container">
+    <div class="title"> Fire distortion</div>
+    <video controls muted>
+      <source src="{{ url_for('static', filename='vfx/Recordings/Fire_Distortion.mp4') }}" type="video/mp4">
+    </video>
+  </div>
+</div>
+</div>
+
+<div class="google-container">
+  <div class="google-container">
+    <div class="title"> Trail Shader</div>
+    <div class="subtext"> Shader that pans a trail texture. You can adjust the length of the trail and how 
+      soft or hard it is. It also has U/V panning controls.
+    </div>
+    <video controls muted>
+      <source src="{{ url_for('static', filename='vfx/Recordings/TrailShader1.mp4') }}" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+
+<div id="fullpage" onclick="this.style.display='none';"></div>
