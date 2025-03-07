@@ -17,7 +17,7 @@ hallmark_folder.sort()
 personal_folder = os.listdir('static/personal/')
 personal_folder.sort()
 
-design_folder = os.listdir('static/2d/')
+design_folder = os.listdir('static/design/')
 design_folder.sort()
 
 @app.route("/")
