@@ -1,0 +1,13 @@
+<h2 id="design">2D Design</h2>
+<div class="line"></div>
+<div class="gallery">
+  <ul class="gallery-index">
+    {% for name in design_folder %}
+      <li class="gallery_li">
+        <img src="{{ url_for('static', filename='design/' + name) }}" loading="lazy">
+        <div class="fullpage" onclick="this.style.display='none';"></div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+<div id="fullpage" onclick="this.style.display='none';"></div>

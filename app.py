@@ -17,6 +17,9 @@ hallmark_folder.sort()
 personal_folder = os.listdir('static/personal/')
 personal_folder.sort()
 
+design_folder = os.listdir('static/2d/')
+design_folder.sort()
+
 @app.route("/")
 def index():
     return render_template("layout.html", 
@@ -24,4 +27,5 @@ def index():
                            google_video=google_video,
                            sony_folder=sony_folder, 
                            hallmark_folder=hallmark_folder, 
-                           personal_folder=personal_folder)
+                           personal_folder=personal_folder,
+                           design_folder=design_folder)
