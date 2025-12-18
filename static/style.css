@@ -216,6 +216,35 @@ nav a {
   .gallery ul { column-count: 1; }
 }
 
+@media (max-width: 1000px) {
+  
+  /* 1. Stack the Name and the Menu vertically */
+  nav {
+    flex-direction: column;
+    padding: 10px 0;
+    height: auto;
+  }
+
+  /* 2. Center the links and allow them to wrap to new lines */
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  /* 3. Make links smaller and closer together */
+  nav a {
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+
+  /* 4. Push the page content down further because the nav is now taller */
+  header {
+    margin-top: 180px;
+  }
+}
+
 .img-hover {
   position: absolute;
   bottom: 0;
